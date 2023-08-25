@@ -7,7 +7,7 @@
 <h3 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h3><p>Let’s create a new file called <code>relationships.pl</code> with the following facts like this:</p>
 <pre class="line-numbers language-prolog"><code class="language-prolog"><span class="token function">like</span><span class="token punctuation">(</span>maria<span class="token punctuation">,</span> food<span class="token punctuation">)</span><span class="token operator">.</span>
 <span class="token function">like</span><span class="token punctuation">(</span>maria<span class="token punctuation">,</span> wine<span class="token punctuation">)</span><span class="token operator">.</span>
-<span class="token function">like</span><span class="token punctuation">(</span>john<span class="token punctuation">,</span> wein<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">like</span><span class="token punctuation">(</span>john<span class="token punctuation">,</span> wine<span class="token punctuation">)</span><span class="token operator">.</span>
 <span class="token function">like</span><span class="token punctuation">(</span>john<span class="token punctuation">,</span> maria<span class="token punctuation">)</span><span class="token operator">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>and then we do the following query:</p>
 <pre class="line-numbers language-bash"><code class="language-bash">?- consult<span class="token punctuation">(</span><span class="token string">"relationships.pl"</span><span class="token punctuation">)</span>.
@@ -41,8 +41,8 @@ false.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <li>As there is no clause <code>like(john,food).</code> this instance for X will fail.</li>
 <li>In this moment, <em>backtracking</em> happens and X is un instantiated.</li>
 <li>PROLOG will try to find an instance of <code>like(maria,X)</code> where <code>X != food</code>.</li>
-<li>The first clause is instantiated with <code>wein</code>.</li>
-<li>PROLOG will check, if the second clause is also true for <code>X = wein</code>.</li>
+<li>The first clause is instantiated with <code>wine</code>.</li>
+<li>PROLOG will check, if the second clause is also true for <code>X = wine</code>.</li>
 <li>As there is the clause <code>like(john, wine).</code>in our file, the user (we!) are notified.</li>
 <li>We want to see other possibilities - we type <code>;</code></li>
 </ul>
